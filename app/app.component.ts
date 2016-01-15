@@ -2,17 +2,17 @@ import {Component} from 'angular2/core';
 
 @Component({
 	selector: 'my-app',
-	styleUrls: ['app/templates/styles/appComponent.css'],
-	templateUrl: 'app/templates/appComponent.html'
+	styleUrls: ['app/templates/styles/app-component.css'],
+	templateUrl: 'app/templates/app-component.html'
 })
 
 export class AppComponent {
 	public title = 'Tour of Heroes';
-	public hero: Hero = {
-		id: 1,
-		name: 'Windstorm'
-	}
+	public selectedHero: Hero;
 	public heroes = HEROES;
+	onSelect(hero: Hero) {
+		this.selectedHero = hero;
+	}
 }
 
 interface Hero {
