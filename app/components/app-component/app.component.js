@@ -24,18 +24,26 @@ System.register(['angular2/core'], function(exports_1) {
                 }
                 AppComponent.prototype.onSelect = function (hero) {
                     this.selectedHero = hero;
+                    console.log(hero);
                 };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
                         styleUrls: [path + 'app-component.css'],
-                        templateUrl: path + 'app-component.html'
+                        templateUrl: path + 'app-component.html',
+                        inputs: [
+                            'hero'
+                        ]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
             })();
             exports_1("AppComponent", AppComponent);
+            // interface Hero {
+            // 	id: number;
+            // 	name: string;
+            // }
             HEROES = [
                 { 'id': 11, 'name': 'Mr. Nice' },
                 { 'id': 12, 'name': 'Narco' },
