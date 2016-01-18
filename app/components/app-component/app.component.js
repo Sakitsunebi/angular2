@@ -9,13 +9,14 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent, HEROES;
+    var path, AppComponent, HEROES;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
+            path = "app/components/app-component/";
             AppComponent = (function () {
                 function AppComponent() {
                     this.title = 'Tour of Heroes';
@@ -27,8 +28,8 @@ System.register(['angular2/core'], function(exports_1) {
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        styleUrls: ['app/templates/styles/app-component.css'],
-                        templateUrl: 'app/templates/app-component.html'
+                        styleUrls: [path + 'app-component.css'],
+                        templateUrl: path + 'app-component.html'
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

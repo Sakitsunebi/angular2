@@ -1,9 +1,12 @@
 import {Component} from 'angular2/core';
+import {Hero} from 'app/services/hero/hero';
+
+var path: String = "app/components/app-component/";
 
 @Component({
 	selector: 'my-app',
-	styleUrls: ['app/templates/styles/app-component.css'],
-	templateUrl: 'app/templates/app-component.html'
+	styleUrls: [ path + 'app-component.css'],
+	templateUrl: path + 'app-component.html'
 })
 
 export class AppComponent {
